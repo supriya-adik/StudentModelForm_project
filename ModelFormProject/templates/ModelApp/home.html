@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="{% static "css/home.css"%}">
+</head>
+<body>
+<form method="post" class="form-group">
+    <div align="center">
+
+     <div class="jumbotron text-primary bg-warning m-5" align="center">
+          <h1 class="text-danger">Student Information Add/Show</h1>
+         <h4> <table> <tr>{{form.as_p}}</tr></table></h4>
+         {%csrf_token%}
+         <input type="submit" class="btn btn-success" value="Add Data" name="submit"> &nbsp;
+         <a href="/list" name="list" role="button" class="btn btn-primary">Show Data</a>
+     </div>
+    </div>
+</form>
+</body>
+</html>
